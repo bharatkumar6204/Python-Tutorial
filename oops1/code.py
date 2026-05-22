@@ -29,3 +29,80 @@ s = Son()
 
 s.house()
 s.Son()
+
+# 4. Polymorphism
+class Dog:
+    def sound(self):
+        print("Dog barks")
+
+class Cat:
+    def sound(self):
+        print("Cat meows")
+
+d = Dog()
+c = Cat()
+
+d.sound()
+c.sound()
+# 5. Encapsulation
+class Bank:
+
+    def __init__(self):
+        self.__balance = 5000
+
+    def show_balance(self):
+        print(self.__balance)
+
+b = Bank()
+
+b.show_balance()
+# 6. Abstraction
+
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+
+    @abstractmethod
+    def start(self):
+        pass
+
+class Car(Vehicle):
+
+    def start(self):
+        print("Car Started")
+
+c = Car()
+c.start()
+
+# Real Project Type OOP Example
+# Bank Management System
+class BankAccount:
+
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(amount, "Deposited")
+
+    def withdraw(self, amount):
+
+        if amount <= self.balance:
+            self.balance -= amount
+            print(amount, "Withdrawn")
+        else:
+            print("Insufficient Balance")
+
+    def check_balance(self):
+        print("Current Balance:", self.balance)
+
+# Object
+user1 = BankAccount("Bharat", 10000)
+
+user1.deposit(5000)
+
+user1.withdraw(3000)
+
+user1.check_balance()
+
