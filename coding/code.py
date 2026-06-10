@@ -1,11 +1,8 @@
-# TwoSum
+# print total number of sum
 
-def TwoSum(nums, target):
-    seen = {}
+lst = [1,2,3,4,5]
+total = 0
 
-    for i in range(len(nums)):
-        complement = target - nums[i]
-        if complement in seen:
-            return[seen[complement], i]
-        seen[nums[i]] = i
-print(TwoSum([2,7,11,15],9))
+for num in lst:
+    total += num
+print(total)
