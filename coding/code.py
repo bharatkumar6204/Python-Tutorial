@@ -1,16 +1,7 @@
-# remove duplicat formm sorted arr
-
-def removeDuplicate(nums):
-    if not nums:
-        return 0
-
-    i = 0
-    for j in range(1, len(nums)):
-        if nums[i] != nums[j]:
-            i += 1
-            nums[i] = nums[j]
-    return i+1
-nums = [1,1,2,2,3,3]
-k = removeDuplicate(nums)
-print(k)
-print(nums[:k]) 
+class Student:
+    def __init__(self,name, age):
+        self.age = age
+        self.name = name
+s1 = Student("bharat", 23)
+print(s1.name, s1.age)
+        
